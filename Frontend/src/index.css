@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  label {
+    @apply flex flex-col gap-1.5 text-sm font-medium text-slate-600;
+  }
+
+  input:not([type="submit"]),
+  select {
+    @apply w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none transition;
+  }
+
+  input:not([type="submit"]):focus,
+  select:focus {
+    @apply border-slate-900 ring-2 ring-slate-900/10;
+  }
+
+  button,
+  input[type="submit"] {
+    @apply cursor-pointer rounded-lg text-sm font-medium transition;
+  }
+
+  table {
+    @apply w-full text-left text-sm;
+  }
+
+  th {
+    @apply px-4 py-3 text-xs font-semibold uppercase tracking-wide text-slate-500;
+  }
+
+  td {
+    @apply px-4 py-3;
+  }
+}
